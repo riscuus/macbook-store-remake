@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Macbook Store</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!--custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav id="navbar" class="navbar navbar-light fixed-top justify-content-center">
+      <a class="navbar-brand">
+        <img id="brand-logo" src="images/Apple-logo.png" alt="brand-logo">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link">Concepto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Especificaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">MacOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Multimedia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Precio</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="concepto">
+      <div id="concepto-caption">
+        <div class="concepto-caption">
+          <h1>Macbook Pro</h1>
+        </div>
+        <div class="video">
+          <a href="" id="video-btn" class="btn btn-lg btn-succes">See the concept video
+            <img width="22" src="images/play-icon.png">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="concepto-exp" class="container">
+      <p>Es más rápido y potente que antes, pero más fino y ligero que nunca. Tiene la pantalla con más color y brillo jamás vista en un portátil Mac. Y viene con la Touch Bar, una barra de vidrio Multi-Touch integrada en el teclado para que siempre tengas a mano las herramientas que necesitas. El MacBook Pro es el resultado de nuestras ideas más innovadoras. Y puede hacer realidad las tuyas.</p>
+    </div>
+
+    <div id="concepto-especs" class="container">
+      <div class="centered">
+        <div class="row">
+          <div class="col-md-3 num1" style="float:none">
+            <h2>1.31</h2><h3>cm</h3>
+          </div>
+          <div  class="col-md-3 num2" style="float:none">
+            <h2>0.9</h2><h3>kg</h3>
+          </div>
+          <div class="col-md-3 num3" style="float:none">
+            <h2>12</h2><h3>inch</h3>
+          </div>
+          <div  class="col-md-3 num4" style="float:none">
+            <h2>10</h2><h3>h</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="keyboard"></div>
+    <div id="keyboard-caption-cont">
+      <div id="keyboard-caption">
+        <h4>Conecta con todo lo que te gusta.</h4>
+        <h5>El MacBook está pensado para un mundo en el que casi todo lo que se hace con un portátil se puede hacer sin cables, gracias a sus tecnologías avanzadas integradas en un diseño increíblemente compacto. Y para los momentos en los que sí necesites conectar algo, tu aliado es el USB-C, un puerto pequeño y práctico que te ofrece un sinfín de posibilidades.</h5>
+      </div>
+    </div>
+
+    <div id=connect>
+      <div class="row">
+        <div class="col-md-4">
+          <div id="cable" class="cable">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div id="mac-no-cable" class="mac-no-cable">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script>
+      var keyboard = document.querySelector("#keyboard");
+
+      function setTranslate(xPos, yPos, el) {
+          el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+      }
+
+      window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+      var xScrollPosition;
+      var yScrollPosition;
+
+      function scrollLoop() {
+          xScrollPosition = window.scrollX;
+          yScrollPosition = window.scrollY;
+
+          setTranslate(0, yScrollPosition*-0.2+200, keyboard);
+
+          requestAnimationFrame(scrollLoop);
+      }
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>
